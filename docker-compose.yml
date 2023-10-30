@@ -1,0 +1,12 @@
+version: '3.4'
+
+services:
+  bondafapi:
+    image: bondafregistry.azurecr.io/bondafapi:0.0.3
+    environment:
+      NODE_ENV: production
+    ports:
+      - 3001:3001
+      - 80:80
+    env_file:
+      - .env
